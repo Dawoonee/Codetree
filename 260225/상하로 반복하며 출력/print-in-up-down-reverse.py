@@ -13,5 +13,5 @@ for i in range(N):
 
 for row in arr:
     for val in row:
-        print(val, end=" ")
+        print(val, end="")
     print()
