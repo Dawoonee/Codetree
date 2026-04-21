@@ -14,8 +14,8 @@ if check(m1, d1, m2, d2):
         step += arr[i]
     step += d2
     step = step - d1
-    step = step%7
-    print(t[1 + step])
+    step = (1 + step)%7
+    print(t[step])
 
 else:
     step = 0
@@ -23,5 +23,5 @@ else:
         step += arr[i]
     step += d1
     step = step - d2
-    step = step%7
-    print(t[1 - step])
+    step = (1 - step)%7
+    print(t[step])
