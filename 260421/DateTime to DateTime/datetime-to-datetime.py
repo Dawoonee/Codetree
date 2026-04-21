@@ -7,9 +7,9 @@ if z <= 0:
     if s <= 0:
         if d <= 0:
             if z == 0 and s == 0 and d == 0:
-                exit(print(0))
+                print(0)
             else:
-                exit(print(-1))
+                print(-1)
 else:
     if s < 0:
         z -= 1
