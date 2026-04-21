@@ -3,10 +3,13 @@ a, b, c = map(int, input().split())
 z = a - 11
 s = b - 11
 d = c - 11
-if z < 0:
-    if s < 0:
-        if d < 0:
-            exit(print(-1))
+if z <= 0:
+    if s <= 0:
+        if d <= 0:
+            if z == 0 and s == 0 and d == 0:
+                exit(print(0))
+            else:
+                exit(print(-1))
 else:
     if s < 0:
         z -= 1
