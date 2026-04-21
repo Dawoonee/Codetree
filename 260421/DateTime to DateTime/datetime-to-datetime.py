@@ -3,6 +3,10 @@ a, b, c = map(int, input().split())
 z = a - 11
 s = b - 11
 d = c - 11
+if z < 0:
+    if s < 0:
+        if d < 0:
+            exit(print(-1))
 if s < 0:
     z -= 1
     s += 23
