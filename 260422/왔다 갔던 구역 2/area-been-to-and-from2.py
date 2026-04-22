@@ -14,16 +14,15 @@ for i in range(n):
         # arr[start] -= 1
         for j in range(start, start + x[i]):
             arr[j] += 1
-        start = j
+        start += x[i]
 
     else:
         # arr[start] -= 1
         for j in range(start- x[i], start):
             arr[j] += 1
-        start = j
+        start -= x[i]
 answer = 0
 for z in arr:
     if z >= 2:
         answer += 1
-
 print(answer)
