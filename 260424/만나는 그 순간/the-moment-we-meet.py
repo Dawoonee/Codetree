@@ -14,8 +14,8 @@ for _ in range(m):
     d2.append(direction)
     t2.append(int(time))
 
-a = [0]*1001
-b = [0]*1001
+a = [-1000001]*1001
+b = [-1000001]*1001
 i, j = 0, 0
 time = 1
 for z in range(n):
@@ -45,6 +45,9 @@ for x in range(m):
 
 for y in range(1, 11001):
     if a[y] == b[y]:
-        answer = y 
+        answer = y
         break
-print(answer)
+if a[answer] == -1000001 and b[answer] == -1000001:
+    print(-1)
+else:
+    print(answer)
