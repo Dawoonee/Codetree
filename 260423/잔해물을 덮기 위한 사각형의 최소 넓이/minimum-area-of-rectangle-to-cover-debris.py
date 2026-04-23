@@ -12,9 +12,16 @@ for y in range(point + y1[1], point + y2[1]+1):
     for x in range(point + x1[1], point + x2[1]+1):
         arr[y][x] -= 1
 
-cnt = 0
+cnt = []
 for y in range(2001):
     for x in range(2001):
-        if arr[y][x] >= 1:
-            cnt += 1
-print(cnt)
+        if arr[y][x] == 1:
+            cnt.append((x, y))
+a, b, c, d = 0, 2001, 0, 2001
+for x, y in cnt:
+    a = max(a, x)
+    b = min(b, x)
+    c = max(c, y)
+    d = min(d, y)
+answer = (a-b)*(c-d)
+print(answer)
