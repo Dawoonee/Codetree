@@ -14,8 +14,8 @@ for _ in range(m):
     d2.append(direction)
     t2.append(int(time))
 
-a = [-1000001]*1001
-b = [-1000001]*1001
+a = [-1000001]*1000001
+b = [-1000001]*1000001
 i, j = 0, 0
 time = 1
 for z in range(n):
