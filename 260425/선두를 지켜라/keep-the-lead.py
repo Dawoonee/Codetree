@@ -28,27 +28,36 @@ for x in range(m):
         pos_b += v2[x]
         b.append(pos_b)
 if a[0] > b[0]:
-    flag = True
+    flag = 'A'
 elif a[0] < b[0]:
-    flag = False
+    flag = 'B'
 else:
-    flag = 0
+    flag = 'C'
 cnt = 0
 for i in range(1, len(a)):
-    if flag:
-        if a[i] < b[i]:
-            cnt += 1
-            flag = False
-        elif a[i] > b[i]:
-            continue
+    if flag == 'C':
+        if a[i] > b[i]:
+            flag = 'A'
+        elif a[i] < b[i]:
+            flag = 'B'
         else:
             continue
-    if not flag:
+    elif flag == 'A' :
+        if a[i] > b[i]:
+            continue
+        elif a[i] < b[i]:
+            cnt += 1
+            flag = 'B'
+        else:
+            continue
+    elif flag == 'B':
         if a[i] > b[i]:
             cnt += 1
-            flag = True
+            flag = 'A'
         elif a[i] < b[i]:
             continue
         else:
             continue
+
+
 print(cnt)
