@@ -8,4 +8,7 @@ for i in range(N):
     if arr[i] >= K:
         answer = i
         break
-print(answer)
+if answer == 0:
+    print(-1)
+else:
+    print(answer)
