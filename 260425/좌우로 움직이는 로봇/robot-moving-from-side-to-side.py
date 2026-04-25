@@ -46,8 +46,14 @@ for i in range(m):
             time_b += 1
         pos_b -= t_b[i]
 cnt = 0
+max_time = max(time_a, time_b)
+for i in range(time_a, max_time):
+    a[i] = pos_a
+for i in range(time_b, max_time):
+    b[i] = pos_b
 
-for i in range(1, 2000001):
+for i in range(1, max_time):
     if a[i-1] != b[i-1] and a[i] == b[i]:
         cnt += 1
+
 print(cnt)
