@@ -12,7 +12,7 @@ for i in range(m):
     for j in range(4):
         nx = x + dx[j]
         ny = y + dy[j]
-        if 0 <= nx < n+1 and 0 <= ny < n+1:
+        if 1 <= nx < n+1 and 1 <= ny < n+1:
             if grid[ny][nx] == 1:
                 cnt += 1
     if cnt >= 3:
