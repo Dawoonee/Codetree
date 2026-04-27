@@ -7,15 +7,16 @@ dy = [0, 1, 0, -1]
 
 for i in range(m):
     cnt = 0
-    y, x = points[i][0], points[i][1]
-    grid[y][x] = 1
+    r, c = points[i][0], points[i][1]
+    grid[r][c] = 1
     for j in range(4):
-        nx = x + dx[j]
-        ny = y + dy[j]
+        nx = c + dx[j]
+        ny = r + dy[j]
         if 1 <= nx < n+1 and 1 <= ny < n+1:
             if grid[ny][nx] == 1:
                 cnt += 1
-    if cnt >= 3:
+
+    if cnt == 3:
         print(1)
     else:
         print(0)
