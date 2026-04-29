@@ -10,7 +10,7 @@ for i in range(n):
             carry = False
             for z in range(5):
                 t = int(u[z]) + int(q[z]) + int(o[z])
-                if t > 10:
+                if t >= 10:
                     carry = True
             if not carry:
                 max_val = max(max_val, int(a) + int(b) + int(c))
