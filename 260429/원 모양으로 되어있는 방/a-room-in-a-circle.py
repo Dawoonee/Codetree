@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(input()) for _ in range(n)]
-min_val = 1000004
+min_val = 1000000000000000000000001
 for i in range(n):
     c = 0
     for j in range(n):
