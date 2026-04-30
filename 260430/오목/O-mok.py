@@ -14,12 +14,10 @@ for i in range(19):
             cnt_w += 1
         if cnt_b == 5:
             print(1)
-            print(i+1, j-1)
-            break
+            exit(print(i+1, j-1))
         if cnt_w == 5:
             print(2)
-            print(i+1, j-1)
-            break
+            exit(print(i+1, j-1))
 #아래
 for i in range(19):
     cnt_b, cnt_w = 0, 0
@@ -35,12 +33,11 @@ for i in range(19):
             cnt_w += 1
         if cnt_b == 5:
             print(1)
-            print(i-1, j+1)
-            break
+            exit(print(i-1, j+1))
         if cnt_w == 5:
             print(2)
-            print(i-1, j+1)
-            break
+            exit(print(i-1, j+1))
+
 # 대각선 오른쪽
 for i in range(19):
     cnt_b, cnt_w = 0, 0
@@ -57,6 +54,18 @@ for i in range(19):
         if board[y][x] == 2:
             cnt_b = 0
             cnt_w += 1
+        if cnt_b == 5:
+            print(1)
+            exit(print(x-1, y-1))
+        if cnt_w == 5:
+            print(2)
+            exit(print(x-1, y-1))
+for i in range(19):
+    cnt_b, cnt_w = 0, 0
+    for j in range(19):
+        x, y = i + j, j
+        if x >= 19 or y >= 19:
+            continue
         if board[x][y] == 0:
             cnt_b = 0
             cnt_w = 0
@@ -68,12 +77,11 @@ for i in range(19):
             cnt_w += 1
         if cnt_b == 5:
             print(1)
-            print(i-1, j-1)
-            break
+            exit(print(x-1, y-1))
         if cnt_w == 5:
             print(2)
-            print(i-1, j-1)
-            break
+            exit(print(x-1, y-1))
+
 #대각선 왼쪽
 for i in range(19):
     cnt_b, cnt_w = 0, 0
@@ -90,6 +98,18 @@ for i in range(19):
         if board[y][x] == 2:
             cnt_b = 0
             cnt_w += 1
+        if cnt_b == 5:
+            print(1)
+            exit(print(x+1, y+1))
+        if cnt_w == 5:
+            print(2)
+            exit(print(x+1, y+1))
+for i in range(19):
+    cnt_b, cnt_w = 0, 0
+    for j in range(19):
+        x, y = j, i + j
+        if x >= 19 or y >= 19:
+            continue
         if board[x][y] == 0:
             cnt_b = 0
             cnt_w = 0
@@ -101,9 +121,7 @@ for i in range(19):
             cnt_w += 1
         if cnt_b == 5:
             print(1)
-            print(i+1, j+1)
-            break
+            exit(print(x+1, y+1))
         if cnt_w == 5:
             print(2)
-            print(i+1, j+1)
-            break
+            exit(print(x+1, y+1))
