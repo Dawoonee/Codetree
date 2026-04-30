@@ -1,4 +1,5 @@
 board = [list(map(int, input().split())) for _ in range(19)]
+flag = False
 #오른쪽
 for i in range(19):
     cnt_b, cnt_w = 0, 0
@@ -125,3 +126,5 @@ for i in range(19):
         if cnt_w == 5:
             print(2)
             exit(print(y+3, x-1))
+if not flag:
+    print(0)
