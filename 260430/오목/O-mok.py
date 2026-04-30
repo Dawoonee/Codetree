@@ -86,8 +86,8 @@ for i in range(19):
 for i in range(19):
     cnt_b, cnt_w = 0, 0
     for j in range(19):
-        x, y = j , i+j
-        if x >= 19 or y >= 19:
+        x, y = i-j , j
+        if x >= 19 or y >= 19 or x<0 or y<0:
             continue
         if board[y][x] == 0:
             cnt_b = 0
@@ -100,14 +100,14 @@ for i in range(19):
             cnt_w += 1
         if cnt_b == 5:
             print(1)
-            exit(print(x+1, y+1))
+            exit(print(y-1, x+3))
         if cnt_w == 5:
             print(2)
-            exit(print(x+1, y+1))
+            exit(print(y-1, x+3))
 for i in range(19):
     cnt_b, cnt_w = 0, 0
     for j in range(19):
-        x, y = j, i + j
+        x, y = i-j , j
         if x >= 19 or y >= 19:
             continue
         if board[x][y] == 0:
@@ -121,7 +121,7 @@ for i in range(19):
             cnt_w += 1
         if cnt_b == 5:
             print(1)
-            exit(print(x+1, y+1))
+            exit(print(y+3, x-1))
         if cnt_w == 5:
             print(2)
-            exit(print(x+1, y+1))
+            exit(print(y+3, x-1))
