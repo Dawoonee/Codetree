@@ -33,10 +33,10 @@ for i in range(19):
             cnt_w += 1
         if cnt_b == 5:
             print(1)
-            exit(print(i-1, j+1))
+            exit(print(j-1, i+1))
         if cnt_w == 5:
             print(2)
-            exit(print(i-1, j+1))
+            exit(print(j-1, i+1))
 
 # 대각선 오른쪽
 for i in range(19):
